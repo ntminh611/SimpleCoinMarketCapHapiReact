@@ -1,6 +1,6 @@
 <div align="center">  
-  <b>CoinMarketCap build by hapijs + reactjs + mongodb</b>
-  LEARNING
+  <h1>CoinMarketCap build by hapijs + reactjs + mongodb</h1>
+  still learning...
 </div>
 
 ## Build Setup

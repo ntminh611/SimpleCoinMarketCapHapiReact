@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import MyHeader from './components/MyHeader'
 import CrytoCurrency from './components/CrytoCurrency'
@@ -8,15 +8,17 @@ import MyPagination from './components/MyPagination'
 
 function App() {
   return (
-    <Switch>
-        <div>
-            <MyHeader />
-            <Route exact path="/" component={CrytoCurrency} />
-            <Route exact path="/:page" component={CrytoCurrency}/>
-            <Route exact path="/WatchList" component={WatchList}/>
-            <MyPagination />
-        </div>
-    </Switch>
+    <div>
+      <MyHeader />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={CrytoCurrency} />
+          <Route exact path="/WatchList" component={WatchList} />
+          <Route exact path="/:page" component={CrytoCurrency} />
+        </Switch>
+      </Router>
+      <MyPagination />
+    </div>
   )
 }
 
