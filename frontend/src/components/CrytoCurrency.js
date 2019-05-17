@@ -51,6 +51,9 @@ class CrytoCurrency extends Component {
     }
 
     render() {
+        if (window.location.pathname.includes("WatchList")) {
+            return null
+        }
         return (
             <Table striped hover>
                 <thead>
